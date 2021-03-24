@@ -14,6 +14,8 @@
 		6999DA9E260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6999DA9C260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld */; };
 		6999DAA0260B500000B265D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6999DA9F260B500000B265D1 /* Assets.xcassets */; };
 		6999DAA3260B500000B265D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6999DAA1260B500000B265D1 /* LaunchScreen.storyboard */; };
+		6999DAAC260B535E00B265D1 /* PhoneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999DAAB260B535E00B265D1 /* PhoneListViewController.swift */; };
+		6999DAAF260B72CE00B265D1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999DAAE260B72CE00B265D1 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		6999DA9F260B500000B265D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6999DAA2260B500000B265D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6999DAA4260B500000B265D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6999DAAB260B535E00B265D1 /* PhoneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneListViewController.swift; sourceTree = "<group>"; };
+		6999DAAE260B72CE00B265D1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				6999DAA1260B500000B265D1 /* LaunchScreen.storyboard */,
 				6999DAA4260B500000B265D1 /* Info.plist */,
 				6999DA9C260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld */,
+				6999DAAB260B535E00B265D1 /* PhoneListViewController.swift */,
+				6999DAAE260B72CE00B265D1 /* InfoViewController.swift */,
 			);
 			path = PhoneBookFromAPI;
 			sourceTree = "<group>";
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6999DAAC260B535E00B265D1 /* PhoneListViewController.swift in Sources */,
 				6999DA9E260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld in Sources */,
 				6999DA98260B4FFD00B265D1 /* ViewController.swift in Sources */,
 				6999DA94260B4FFD00B265D1 /* AppDelegate.swift in Sources */,
+				6999DAAF260B72CE00B265D1 /* InfoViewController.swift in Sources */,
 				6999DA96260B4FFD00B265D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
