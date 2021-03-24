@@ -59,7 +59,7 @@ class GistConstactsRepository: ContactsRepository {
 
 class PhoneListViewController: UIViewController {
     
-    var isGCD: Bool
+    var isGCD: Bool = true
 
     @IBOutlet var tableView: UITableView!
     var totalList: [Contact] = []
@@ -69,19 +69,26 @@ class PhoneListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-       
-        
-        print("PhoneList hello!")
         let contactsRepo = GistConstactsRepository(path: "https://gist.githubusercontent.com/artgoncharov/d257658423edd46a9ead5f721b837b8c/raw/c38ace33a7c871e4ad3b347fc4cd970bb45561a3/contacts_data.json")
         
-        let queue = DispatchQueue.global(qos: .utility)
+        if (isGCD){
+            let queue = DispatchQueue.global(qos: .utility)
             queue.async{
-               // let res: [Contact] = try! contactsRepo.getContacts()
                 self.totalList = try! contactsRepo.getContacts()
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
+            }
+        } else {
+            OperationQueue().addOperation({
+                self.totalList = try! contactsRepo.getContacts()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+        }
+        
+       
         
     }
 }

@@ -15,8 +15,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "gotoListWithGCD") {
+            let destination = segue.destination as! PhoneListViewController
+            destination.isGCD = true
+        } else
+        if (segue.identifier == "gotoListAndQueue") {
+            let destination = segue.destination as! PhoneListViewController
+            destination.isGCD = false
+        }
+    }
 }
 
