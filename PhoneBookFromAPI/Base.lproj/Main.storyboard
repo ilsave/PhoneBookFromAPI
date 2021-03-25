@@ -32,14 +32,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Based on type of the task you can  choose the way you want to download contacts" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt0-MN-T7j">
-                                <rect key="frame" x="0.0" y="88" width="414" height="39.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Based on type of the task you can  choose the way you want to download contacts" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt0-MN-T7j">
+                                <rect key="frame" x="10" y="88" width="394" height="158"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M93-bk-Ppg">
-                                <rect key="frame" x="0.0" y="157.5" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="276" width="414" height="30"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <state key="normal" title="Using GCD"/>
                                 <connections>
@@ -47,8 +47,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l12-sK-YUi">
-                                <rect key="frame" x="0.0" y="207.5" width="414" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <rect key="frame" x="0.0" y="326" width="414" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <state key="normal" title="Using operationQueue"/>
                                 <connections>
                                     <segue destination="VKX-7y-GnM" kind="show" identifier="gotoListAndQueue" id="vVV-g9-XMZ"/>
@@ -60,10 +60,10 @@
                         <constraints>
                             <constraint firstItem="Nt0-MN-T7j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4NW-Ll-ubs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M93-bk-Ppg" secondAttribute="trailing" id="Hi1-tn-mCM"/>
-                            <constraint firstItem="Nt0-MN-T7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J3J-WP-xYg"/>
                             <constraint firstItem="M93-bk-Ppg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KeD-8g-Olw"/>
+                            <constraint firstAttribute="trailing" secondItem="Nt0-MN-T7j" secondAttribute="trailing" constant="10" id="Pnl-q6-Djd"/>
+                            <constraint firstItem="Nt0-MN-T7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dTK-hJ-E7d"/>
                             <constraint firstItem="M93-bk-Ppg" firstAttribute="top" secondItem="Nt0-MN-T7j" secondAttribute="bottom" constant="30" id="lzM-Te-5WE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nt0-MN-T7j" secondAttribute="trailing" id="sHT-qS-PX0"/>
                             <constraint firstItem="l12-sK-YUi" firstAttribute="top" secondItem="M93-bk-Ppg" secondAttribute="bottom" constant="20" id="uKu-ag-Lc9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l12-sK-YUi" secondAttribute="trailing" id="vkD-rb-8Xx"/>
                             <constraint firstItem="l12-sK-YUi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y5r-cs-16J"/>
@@ -224,14 +224,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vVV-g9-XMZ"/>
+        <segue reference="hU4-Qq-eAc"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

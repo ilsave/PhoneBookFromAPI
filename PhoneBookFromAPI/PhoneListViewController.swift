@@ -50,8 +50,7 @@ class GistConstactsRepository: ContactsRepository {
         task.resume()
         
         
-        // TODO: add timeout
-        let time: DispatchTime = .now() + .seconds(5)
+        let time: DispatchTime = .now() + .seconds(3)
         sem.wait(timeout: time)
         return result
     }
@@ -66,6 +65,7 @@ class PhoneListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -74,33 +74,36 @@ class PhoneListViewController: UIViewController {
         if (isGCD){
             let queue = DispatchQueue.global(qos: .utility)
             queue.async{
-                self.totalList = try! contactsRepo.getContacts()
+                do {
+                    self.totalList = try contactsRepo.getContacts()
+                } catch {
+                    print("error \(error)")
+                }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             }
         } else {
             OperationQueue().addOperation({
-                self.totalList = try! contactsRepo.getContacts()
+                do {
+                    self.totalList = try contactsRepo.getContacts()
+                } catch {
+                    print("error \(error)")
+                }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             })
         }
-        
-       
-        
     }
 }
 
 extension PhoneListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped me!")
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController
         vc.contact = totalList[indexPath.row]
         self.present(vc, animated: true, completion: nil)
-        
     }
 }
 
