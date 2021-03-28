@@ -57,8 +57,11 @@ class GistConstactsRepository: ContactsRepository {
         task.resume()
         
         
-        let time: DispatchTime = .now() + .seconds(3)
-        sem.wait(timeout: time)
+        let time: DispatchTime = .now() + .seconds(secondsToWait)
+        if (sem.wait(timeout: time) == .timedOut) {
+            print("We have been waiting for too long time mate")
+            return []
+        }
         return result
     }
 }
