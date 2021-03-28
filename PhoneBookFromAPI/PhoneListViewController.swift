@@ -10,10 +10,16 @@ import Foundation
 import Dispatch
 
 struct Contact: Codable {
-    let firstname: String
-    let lastname: String
+    let firstName: String
+    let lastName: String
     let email: String
     let phone: String
+    
+    enum CodingKeys: String, CodingKey {
+        case firstName = "firstname"
+        case lastName = "lastname"
+        case email, phone
+    }
 
 }
 
@@ -115,7 +121,7 @@ extension PhoneListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = totalList[indexPath.row].firstname
+        cell.textLabel?.text = totalList[indexPath.row].firstName
         return cell
     }
 }

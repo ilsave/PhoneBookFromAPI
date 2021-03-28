@@ -25,8 +25,8 @@ class InfoViewController: UIViewController {
         guard let contact = contact else {
             return
         }
-        nameLabel.text = contact.firstname
-        surnameLabel.text = contact.lastname
+        nameLabel.text = contact.firstName
+        surnameLabel.text = contact.lastName
         phoneLabel.text = contact.phone
         emailLabel.text = contact.email
     }
