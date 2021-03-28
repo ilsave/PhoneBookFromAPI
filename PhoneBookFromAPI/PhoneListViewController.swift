@@ -29,6 +29,7 @@ protocol ContactsRepository {
 
 class GistConstactsRepository: ContactsRepository {
     private let path: String
+    let secondsToWait: Int = 3
     init(path: String) {
         self.path = path
     }
@@ -75,7 +76,8 @@ class PhoneListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let contactsRepo = GistConstactsRepository(path: "https://gist.githubusercontent.com/artgoncharov/d257658423edd46a9ead5f721b837b8c/raw/c38ace33a7c871e4ad3b347fc4cd970bb45561a3/contacts_data.json")
+        let contactsRepo = GistConstactsRepository(
+            path: "https://gist.githubusercontent.com/artgoncharov/d257658423edd46a9ead5f721b837b8c/raw/c38ace33a7c871e4ad3b347fc4cd970bb45561a3/contacts_data.json")
         
         if (isGCD){
             let queue = DispatchQueue.global(qos: .utility)

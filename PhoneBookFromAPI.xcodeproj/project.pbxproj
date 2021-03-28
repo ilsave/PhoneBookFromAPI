@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696EAA7C26105E40005C91F6 /* DownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696EAA7B26105E40005C91F6 /* DownloadOperation.swift */; };
 		6999DA94260B4FFD00B265D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999DA93260B4FFD00B265D1 /* AppDelegate.swift */; };
 		6999DA96260B4FFD00B265D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999DA95260B4FFD00B265D1 /* SceneDelegate.swift */; };
 		6999DA98260B4FFD00B265D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999DA97260B4FFD00B265D1 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		696EAA7B26105E40005C91F6 /* DownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadOperation.swift; sourceTree = "<group>"; };
 		6999DA90260B4FFD00B265D1 /* PhoneBookFromAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookFromAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6999DA93260B4FFD00B265D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6999DA95260B4FFD00B265D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				6999DA9C260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld */,
 				6999DAAB260B535E00B265D1 /* PhoneListViewController.swift */,
 				6999DAAE260B72CE00B265D1 /* InfoViewController.swift */,
+				696EAA7B26105E40005C91F6 /* DownloadOperation.swift */,
 			);
 			path = PhoneBookFromAPI;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				6999DAAC260B535E00B265D1 /* PhoneListViewController.swift in Sources */,
 				6999DA9E260B4FFD00B265D1 /* PhoneBookFromAPI.xcdatamodeld in Sources */,
+				696EAA7C26105E40005C91F6 /* DownloadOperation.swift in Sources */,
 				6999DA98260B4FFD00B265D1 /* ViewController.swift in Sources */,
 				6999DA94260B4FFD00B265D1 /* AppDelegate.swift in Sources */,
 				6999DAAF260B72CE00B265D1 /* InfoViewController.swift in Sources */,
